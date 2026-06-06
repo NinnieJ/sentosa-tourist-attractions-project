@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="attractions.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentosa Tourist Attractions Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">data.gov.sg powered recommender</p>
+      <h1>Sentosa SmartPick</h1>
+      <p class="intro">
+    Choose your prefered attractions and let our recommender suggest the best attraction for you.
+      </p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel controls" aria-labelledby="form-title">
+      <h2 id="form-title">Plan Your Visit</h2>
+
+      <form id="recommender-form">
+    <label for="interest">
+    <i class="fa-regular fa-heart" style="color: rgb(210, 45, 61);"></i>
+    Main Interest
+</label>
+        <select id="interest" name="interest">
+          <option value="thrill">Thrill rides</option>
+          <option value="water">Water activities</option>
+          <option value="indoor">Indoor attractions</option>
+          <option value="nature">Nature and sightseeing</option>
+          <option value="family">Family friendly</option>
+          <option value="relax">Relaxing</option>
+        </select>
+
+        <label class="budget-label">
+    <i class="fa-solid fa-sack-dollar" style="color: rgb(210, 45, 61);"></i>
+    Budget
+</label>
+        <select id="budget" name="budget">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <label class="time-label">
+    <i class="fa-solid fa-clock" style="color: rgb(210, 45, 61);"></i>
+    Time available
+</label>
+        <select id="time" name="time">
+          <option value="short">Short visit</option>
+          <option value="half-day" selected>Half-day</option>
+          <option value="full-day">Full-day</option>
+        </select>
+
+        <label class="group-label">
+    <i class="fa-regular fa-user" style="color: rgb(210, 45, 61);"></i>
+    Visiting with
+</label>
+        <select id="group" name="group">
+          <option value="solo">Solo</option>
+          <option value="friends" selected>Friends</option>
+          <option value="couple">Partner</option>
+          <option value="family">Family</option>
+        </select>
+
+        <button type="submit">
+    <i class="fa-brands fa-sistrix" style="color: rgb(248, 245, 246);"></i>
+    Recommend Attractions
+</button>
+      </form>
+    </section>
+
+    <section class="panel results" aria-live="polite">
+      <div class="weather-bar">
+        <div>
+          <p class="label">Live Sentosa Weather</p>
+          <p id="weather-text">Loading weather...</p>
+        </div>
+        <button id="refresh-weather" type="button">
+    <i class="fa-solid fa-arrows-rotate" style="color:rgb(40, 2, 215)"></i>
+</button>
+      </div>
+
+      
+      <div id="api-status" class="status"></div>
+      <div id="recommendations" class="recommendations"></div>
+    </section>
+  </main>
+  
+
+  <script src="attractions.js"></script>
+</body>
+</html>
