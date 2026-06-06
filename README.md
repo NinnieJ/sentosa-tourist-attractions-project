@@ -53,3 +53,7 @@ The JavaScript gives points when an attraction matches the user's choices. It al
 - Add images for each attraction.
 - Add a map link for each attraction.
 - Save the user's last selected preferences with local storage.
+
+## FIGMA 
+
+https://www.figma.com/board/7KcgIr6PVxfsXwzJ8tsSi0/Programming-Fundamentals-Project-Organiser?node-id=0-1&t=jSJ3qdwmy0dORY04-1
